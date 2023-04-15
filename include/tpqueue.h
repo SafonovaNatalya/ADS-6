@@ -21,9 +21,9 @@ class TPQueue {
   delete[] arr;
   }
   void push(const T& value) {
-  if (isFull())
+  if (isFull()) {
   throw std::string("Full!!");
-  else {
+  } else {
   count += 1;
   int helper = last;
   for (int i = first; i < last; i++) {
@@ -40,14 +40,13 @@ class TPQueue {
   }
   }
   T& pop() {
-  if (isEmpty())
+  if (isEmpty()) {
   throw std::string("Empty!!");
-  else {
+  } else {
   count -= 1;
   return arr[first++ % size];
   }
   }
- }
 };
 
 struct SYM {
