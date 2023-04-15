@@ -10,7 +10,7 @@ class TPQueue {
   int first, last, count;
 
  public:
-  TQueue(): first(0), last(0), count(0) {
+  TPQueue(): first(0), last(0), count(0) {
   arr = new T[size];
   }
   bool isEmpty() const {
@@ -19,7 +19,7 @@ class TPQueue {
   bool isFull() const {
   return count == size;
   }
-  ~TQueue() {
+  ~TPQueue() {
   delete[] arr;
   }
   void push(const T& value) {
