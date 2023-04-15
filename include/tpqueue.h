@@ -10,7 +10,7 @@ class TPQueue {
   int first, last, count;
 
  public:
-  TQueue(): first(0), last(0), count(0){}
+  TQueue(): first(0), last(0), count(0) {}
   bool isEmpty() const {
   return count == 0;
   }
@@ -39,12 +39,14 @@ class TPQueue {
   last += 1;
   }
   }
+  }
   T& pop() {
   if (isEmpty())
   throw std::string("Empty!!");
   else {
   count -= 1;
   return arr[first++ % size];
+  }
   }
   }
 };
