@@ -39,7 +39,6 @@ class TPQueue {
   last += 1;
   }
   }
-  }
   T& pop() {
   if (isEmpty())
   throw std::string("Empty!!");
