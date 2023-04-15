@@ -3,6 +3,11 @@
 #define INCLUDE_TPQUEUE_H_
 #include <string>
 
+struct SYM {
+  char ch;
+  int prior;
+};
+
 template<typename T, int size>
 class TPQueue {
  private:
@@ -34,7 +39,7 @@ class TPQueue {
      break;
     }
   }
-  for (int i = last; i < helper; i++) {
+  for (int i = last; i < helper; i--) {
     arr[i % size] = arr[(i - 1) % size];
   }
   arr[helper % size] = value;
@@ -47,11 +52,6 @@ class TPQueue {
   count -= 1;
   return arr[first++ % size];
   }
-};
-
-struct SYM {
-  char ch;
-  int prior;
 };
 
 #endif  // INCLUDE_TPQUEUE_H_
