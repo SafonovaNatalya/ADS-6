@@ -6,11 +6,13 @@
 template<typename T, int size>
 class TPQueue {
  private:
-  T arr[size];
+  T *arr;
   int first, last, count;
 
  public:
-  TQueue(): first(0), last(0), count(0) {}
+  TQueue(): first(0), last(0), count(0) {
+  arr = new T[size];
+  }
   bool isEmpty() const {
   return count == 0;
   }
