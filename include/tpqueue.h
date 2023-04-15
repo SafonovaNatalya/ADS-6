@@ -31,7 +31,7 @@ class TPQueue {
   if (isFull()) {
   throw std::string("Full!!");
   }
-  count+=1;
+  count += 1;
   int helper = last;
   for (int i = first; i < last; i++) {
     if (arr[i].prior < value.prior) {
@@ -49,7 +49,7 @@ class TPQueue {
   if (isEmpty()) {
   throw std::string("Empty!!");
   }
-  count-=1;
+  count -= 1;
   return arr[first++ % size];
   }
 };
