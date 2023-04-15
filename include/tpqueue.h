@@ -25,7 +25,7 @@ class TPQueue {
   void push(const T& value) {
   if (isFull()) {
   throw std::string("Full!!");
-  } else {
+  }
   count += 1;
   int helper = last;
   for (int i = first; i < last; i++) {
@@ -40,14 +40,12 @@ class TPQueue {
   arr[helper % size] = value;
   last += 1;
   }
-  }
   T& pop() {
   if (isEmpty()) {
   throw std::string("Empty!!");
-  } else {
+  }
   count -= 1;
   return arr[first++ % size];
-  }
   }
 };
 
